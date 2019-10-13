@@ -1,0 +1,9 @@
+$col: red;
+
+p {
+    color: $col;
+    background: pink;
+    span{
+        background-color: yellow
+    }
+}

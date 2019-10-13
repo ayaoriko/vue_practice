@@ -1,0 +1,29 @@
+mixin greet(name='みやこ')
+    p #{name}さん こんにちは!
+
+mixin header(page_title='ページ名',page_desc='ページ詳細')
+    html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        block title
+        title #{page_title}
+        block og:title
+        meta(property="og:title", content=page_title)
+        block og:type
+        meta(property="og:type", content="website")
+        block og:url
+        meta(property="og:url", content="http://#{metas.url}")
+        block og:image
+        meta(property="og:image", content="http://#{metas.image}/og_image.png")
+        block og:site-name
+        meta(property="og:site_name", content=site_title)
+        block og:desc
+        meta(property="og:description", content=page_desc)
+        block og:app_id
+        meta(property="fb:app_id", content="任意のID")
+
+mixin footer(site_name='サイト名')
+    footer
+        h1 #{site_name}

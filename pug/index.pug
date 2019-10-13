@@ -1,0 +1,24 @@
+include _mixin.pug
+include _config.pug
+
+-
+  var page_title =　'テストページ'
+  var page_desc = 'ページ詳細'
+
+<!DOCTYPE html>
++header(page_title,page_desc)
+body
+  main
+    section
+      +greet('乃愛','kana')
+      h2 新着情報
+      ul.newsBlock
+        each item in list
+          .newsBox
+            a(href="./" + item.slug )
+              .img_wrap
+                img(src="img/"+item.slug+".jpg")
+              .page_num #{item.num}
+              .date #{item.date}
+
+  +footer()
