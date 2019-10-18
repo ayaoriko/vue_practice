@@ -1,7 +1,7 @@
 mixin greet(name='みやこ')
     p #{name}さん こんにちは!
 
-mixin header(page_title='ページ名',page_desc='ページ詳細')
+mixin head(page_title='ページ名',page_desc='ページ詳細')
     html(lang="ja")
     head
         meta(charset="UTF-8")
@@ -23,6 +23,10 @@ mixin header(page_title='ページ名',page_desc='ページ詳細')
         meta(property="og:description", content=page_desc)
         block og:app_id
         meta(property="fb:app_id", content="任意のID")
+
+mixin header(site_name='サイト名')
+    header
+        h1 #{site_name}
 
 mixin footer(site_name='サイト名')
     footer

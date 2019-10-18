@@ -43,7 +43,7 @@ gulp.task("scss", function() {
 gulp.task('html', function() {
   return gulp.src(paths.html.src)
   .pipe(plumber({
-    errorHandler: notify.onError("Error: <%= error.message %>") //<-
+    errorHandler: notify.onError("Error: <%= error.message %>")
   }))
   .pipe(pug({
     pretty: true
@@ -53,10 +53,10 @@ gulp.task('html', function() {
 
 const { series } = require('gulp');
 
-//exports.default = series('scss', 'html' );
+exports.default = series('scss', 'html' );
 
 // 自動監視のタスクを作成
-gulp.task('default-watch', () => {
+gulp.task('watch', () => {
   gulp.watch('./scss/**/*.scss', gulp.task('scss'));
   gulp.watch('./pug/**/*.pug', gulp.task('html'));
 });

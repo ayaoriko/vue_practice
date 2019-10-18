@@ -5,20 +5,37 @@ include _config.pug
   var page_title =　'テストページ'
   var page_desc = 'ページ詳細'
 
+
 <!DOCTYPE html>
-+header(page_title,page_desc)
++head(page_title,page_desc)
 body
+  +header()
   main
     section
       +greet('乃愛','kana')
       h2 新着情報
+      p こちらでは
+      span 新着情報
+      | をお伝えします。
+
+      p こちらでは
+        span 新着情報
+        | をおしらせします。
+
+      p pタグです
+        br
+        | pタグです
+        span spanタグです
+        br
+        | pタグです
+
       ul.newsBlock
         each item in list
           .newsBox
-            a(href="./" + item.slug )
+            a(href="./" + item.slug)
               .img_wrap
                 img(src="img/"+item.slug+".jpg")
               .page_num #{item.num}
               .date #{item.date}
-
   +footer()
+  script(src="js/index.js")
