@@ -11,31 +11,20 @@ include _config.pug
 body
   +header()
   main
-    section
-      +greet('乃愛','kana')
-      h2 新着情報
-      p こちらでは
-      span 新着情報
-      | をお伝えします。
-
-      p こちらでは
-        span 新着情報
-        | をおしらせします。
-
-      p pタグです
-        br
-        | pタグです
-        span spanタグです
-        br
-        | pタグです
-
-      ul.newsBlock
-        each item in list
-          .newsBox
-            a(href="./" + item.slug)
-              .img_wrap
-                img(src="img/"+item.slug+".jpg")
-              .page_num #{item.num}
-              .date #{item.date}
-  +footer()
+    section.main-visual
+      h1.main-visual_main-title Vue.js Practice Site
+      p.main-visual_sub-title
+        | ayaoriko テストサイト
+      figure.main-visual_img-wrap
+        img(src="img/"+main-visual_logo-icon+".png")
+    section.lesson
+      div.lesson_inner.inner-contents
+        div.lesson_sub-title Lesson 1
+        h2.lesson_title Contact Form
+        p.lesson_detail UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。
+        figure.lesson_img-wrap
+          img(src="img/lesson_image.jpg")
+        div.botton-wrap
+          a.base-botton ページを見る
+  +footer('ayaoriko')
   script(src="js/index.js")
