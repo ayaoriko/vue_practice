@@ -7,24 +7,27 @@ include _config.pug
 
 
 <!DOCTYPE html>
-+head(page_title,page_desc)
-body
-  +header()
-  main
-    section.main-visual
-      h1.main-visual_main-title Vue.js Practice Site
-      p.main-visual_sub-title
-        | ayaoriko テストサイト
-      figure.main-visual_img-wrap
-        img(src="img/"+main-visual_logo-icon+".png")
-    section.lesson
-      div.lesson_inner.inner-contents
-        div.lesson_sub-title Lesson 1
-        h2.lesson_title Contact Form
-        p.lesson_detail UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。
-        figure.lesson_img-wrap
-          img(src="img/lesson_image.jpg")
-        div.botton-wrap
-          a.base-botton ページを見る
-  +footer('ayaoriko')
-  script(src="js/index.js")
+html(lang="ja")
+  +head(page_title,page_desc)
+  body
+    +header()
+    main.contents
+      section.main-visual
+        div.main-visual_inner.contents-inner
+          h1.main-visual_main-title Vue.js Practice Site
+          p.main-visual_sub-title
+            | ayaoriko テストサイト
+          figure.main-visual_img-wrap
+            img(src="img/logo.png")
+      article.article
+        section.lesson
+          div.lesson_inner.contents-inner
+            div.lesson_sub-title Lesson 1
+            h2.lesson_title Contact Form
+            p.lesson_detail UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。
+            figure.lesson_img-wrap(style='background-image: url(/img/lesson_image.jpg);')
+              im
+            div.botton-wrap
+              a.base-botton(href="#") ページを見る
+    +footer('ayaoriko')
+    script(src="js/index.js")

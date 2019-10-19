@@ -1,43 +1,52 @@
 <!DOCTYPE html>
-<html lang="ja"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>テストページ</title>
-  <meta property="og:title" content="テストページ"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="http://#{metas.url}"/>
-  <meta property="og:image" content="http://#{metas.image}/og_image.png"/>
-  <meta property="og:site_name" content="テストサイト"/>
-  <meta property="og:description" content="ページ詳細"/>
-  <meta property="fb:app_id" content="任意のID"/>
-</head>
-<body>
-  <header class="header-block">
-    <div class="header-inner inner-contents">
-      <div class="header_txt-link"><img class="header_ico" src="img/header_arrow.png"/><a href="https://ayaoriko.com">ayaoriko.com</a></div>
-      <div class="header_logo-block"><a class="header_logo-block_ico ico_twitter"><img src="img/ico-twitter.png"/></a><a class="header_logo-block_ico ico_facebook"><img src="img/ico-facebook.png"/></a></div>
-    </div>
-  </header>
-  <main>
-    <section class="main-visual">
-      <h1 class="main-visual_main-title">Vue.js Practice Site</h1>
-      <p class="main-visual_sub-title">ayaoriko テストサイト</p>
-      <figure class="main-visual_img-wrap"><img src="NaN.png"/></figure>
-    </section>
-    <section class="lesson">
-      <div class="lesson_inner inner-contents">
-        <div class="lesson_sub-title">Lesson 1</div>
-        <h2 class="lesson_title">Contact Form</h2>
-        <p class="lesson_detail">UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。</p>
-        <figure class="lesson_img-wrap"><img src="img/lesson_image.jpg"/></figure>
-        <div class="botton-wrap"><a class="base-botton">ページを見る</a></div>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>テストページ</title>
+    <meta property="og:title" content="テストページ"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://#{metas.url}"/>
+    <meta property="og:image" content="http://#{metas.image}/og_image.png"/>
+    <meta property="og:site_name" content="テストサイト"/>
+    <meta property="og:description" content="ページ詳細"/>
+    <meta property="fb:app_id" content="任意のID"/>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_inner contents-inner">
+        <div class="header_txt-link"><img class="header_txt-link_ico" src="img/header_arrow.svg"/><a href="https://ayaoriko.com">ayaoriko.com</a></div>
+        <div class="header_logo-block"><a class="header_logo-block_ico ico_twitter" href="#"><img src="img/ico-twitter.png"/></a><a class="header_logo-block_ico ico_facebook" href="#"><img src="img/ico-facebook.png"/></a></div>
       </div>
-    </section>
-  </main>
-  <footer class="footer-block">
-    <div class="footer-inner inner-contents"><small>copyright 2018 ayaoriko</small></div>
-  </footer>
-  <script src="js/index.js"></script>
-</body>
+    </header>
+    <main class="contents">
+      <section class="main-visual">
+        <div class="main-visual_inner contents-inner">
+          <h1 class="main-visual_main-title">Vue.js Practice Site</h1>
+          <p class="main-visual_sub-title">ayaoriko テストサイト</p>
+          <figure class="main-visual_img-wrap"><img src="img/logo.png"/></figure>
+        </div>
+      </section>
+      <article class="article">
+        <section class="lesson">
+          <div class="lesson_inner contents-inner">
+            <div class="lesson_sub-title">Lesson 1</div>
+            <h2 class="lesson_title">Contact Form</h2>
+            <p class="lesson_detail">UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。</p>
+            <figure class="lesson_img-wrap" style="background-image: url(/img/lesson_image.jpg);">
+              <im></im>
+            </figure>
+            <div class="botton-wrap"><a class="base-botton" href="#">ページを見る</a></div>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner contents-inner"><small>copyright 2018 ayaoriko</small></div>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>

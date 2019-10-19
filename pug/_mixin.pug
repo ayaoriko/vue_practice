@@ -2,7 +2,6 @@ mixin greet(name='みやこ')
   p #{name}さん こんにちは!
 
 mixin head(page_title='ページ名',page_desc='ページ詳細')
-  html(lang="ja")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -23,21 +22,24 @@ mixin head(page_title='ページ名',page_desc='ページ詳細')
     meta(property="og:description", content=page_desc)
     block og:app_id
     meta(property="fb:app_id", content="任意のID")
+    block style
+    link(rel="stylesheet",href="node_modules/normalize.css/normalize.css")
+    link(rel="stylesheet",href="css/style.css")
 
 mixin header(site_name='サイト名')
-  header.header-block
-    .header-inner.inner-contents
+  header.header
+    .header_inner.contents-inner
       .header_txt-link
-        img.header_ico(src="img/header_arrow.png")
+        img.header_txt-link_ico(src="img/header_arrow.svg")
         |
         a(href="https://ayaoriko.com") ayaoriko.com
       .header_logo-block
-        a.header_logo-block_ico.ico_twitter
+        a.header_logo-block_ico.ico_twitter(href="#")
           img(src="img/ico-twitter.png")
-        a.header_logo-block_ico.ico_facebook
+        a.header_logo-block_ico.ico_facebook(href="#")
           img(src="img/ico-facebook.png")
 
 mixin footer(site_name='サイト名')
-  footer.footer-block
-    .footer-inner.inner-contents
+  footer.footer
+    .footer-inner.contents-inner
       small copyright 2018 #{site_name}
