@@ -5,9 +5,26 @@ $col_font: #35495E;
 
 $width_pc: 1200px;
 
+$width_tab: 768px;
+$width_sp: 568px;
+
+@mixin tab {
+    @media (min-width: $width_tab) and (max-width: ($width_pc)) {
+      @content;
+    }
+  }
+@mixin sp {
+    @media (max-width: ($width_sp)) {
+        @content;
+    }
+}
+
 body{
     font-family: "Hiragino Kaku Gothic","メイリオ", sans-serif;
     font-size: 100%;
+    @include sp {
+        font-size: 80%;
+    };
 }
 
 a{
@@ -37,10 +54,17 @@ $header_height: 50px;
     box-shadow: 0 2px 9px rgba(0,0,0,.15);
     width: 100vw;
     z-index: 999;
+
     &_inner{
         @include flex_items-center;
         justify-content: space-between;
         height: $header_height;
+        @include tab {
+            padding: 0 1em;
+        };
+        @include sp {
+            padding: 0 1em;
+        };
     }
     &_logo-block{
         align-items: center;
@@ -71,6 +95,12 @@ $header_height: 50px;
     position: relative;
     .article{
         border-bottom: 1px solid #D8D8D8;
+        @include tab {
+            padding: 0 1em;
+        };
+        @include sp {
+            padding: 0 1em;
+        };
     }
 }
 
@@ -83,23 +113,34 @@ $header_height: 50px;
         text-align: center;
         border-bottom: 1px solid #D8D8D8;
         padding: 12vh 0;
+        @include sp {
+            padding: 25vh 0;
+        };
     }
     &_main-title{
         margin: 0;
         font-size: 3.8em;
         font-weight: 600;
         color: $col_base;
+        @include sp {
+            font-size: 2.3em;
+        };
     }
     &_sub-title{
         margin: 4vh 0 6vh;
         color: $col_font;
         font-weight: 600;
         font-size: 2em;
-
+        @include sp {
+            font-size: 1.8em;
+        };
     }
     &_img-wrap{
         height: 40vh;
         margin: 0;
+        @include sp {
+            height: 20vh;
+        };
         img{
             height: 100%;
         }
@@ -114,6 +155,9 @@ $header_height: 50px;
         font-weight: 600;
         margin: 0;
         font-size: 3em;
+        @include sp {
+            font-size: 2.5em;
+        };
     }
     &_sub-title{
         font-size: 1.6em;
@@ -130,6 +174,10 @@ $header_height: 50px;
         height: 370px;
         background-size: cover;
         margin: auto;
+        @include sp {
+            width: 100%;
+            height: 200px;
+        };
     }
 }
 .button{

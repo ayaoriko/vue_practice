@@ -2,13 +2,13 @@ include _mixin.pug
 include _config.pug
 
 -
-  var page_title =　'テストページ'
-  var page_desc = 'ページ詳細'
-
+  var page_title =　'Vue.js Practice Site'
+  var page_desc = 'あやおり子のVue練習サイトです。'
+  var page_slug = ''
 
 <!DOCTYPE html>
 html(lang="ja")
-  +head(page_title,page_desc)
+  +head(page_title,page_desc,page_slug)
   body
     +header()
     main.contents
