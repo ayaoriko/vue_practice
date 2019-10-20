@@ -20,7 +20,7 @@ a{
     max-width: $width_pc;
     margin: auto;
     .article &{
-        padding: 120px 0;
+        padding: 8em 0;
     }
 }
 
@@ -43,11 +43,10 @@ $header_height: 50px;
         height: $header_height;
     }
     &_logo-block{
-        @include flex_items-center;
-        &_ico{
-            margin-right: 24px;
-            width: 30px;
-        }
+        align-items: center;
+        display: grid;
+        grid-template-columns: 30px 30px;
+        column-gap: 1em;
         img{
             width: 100%;
         }
@@ -70,6 +69,9 @@ $header_height: 50px;
     padding-top: $header_height ;
     z-index: 1;
     position: relative;
+    .article{
+        border-bottom: 1px solid #D8D8D8;
+    }
 }
 
 .main-visual{
@@ -108,10 +110,43 @@ $header_height: 50px;
     &_inner{
         text-align: center;
     }
+    &_title{
+        font-weight: 600;
+        margin: 0;
+        font-size: 3em;
+    }
+    &_sub-title{
+        font-size: 1.6em;
+        font-weight: 600;
+        margin-bottom: .2em;
+    }
+    &_detail{
+        font-size: 1.2em;
+        line-height: 1.6;
+        margin: 1.5em 0 3em;
+    }
     &_img-wrap{
         width: 665px;
         height: 370px;
         background-size: cover;
         margin: auto;
     }
+}
+.button{
+    &_base{
+        display: inline-block;
+        background: $col_base;
+        padding: 1em 3.2em;
+        border-radius: 1.6em;
+        color: $col_bg;
+    }
+    &_wrap{
+        margin-top: 3em;
+    }
+}
+
+.footer{
+    padding: 1em 0;
+    text-align: center;
+
 }
