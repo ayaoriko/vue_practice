@@ -20,7 +20,7 @@ $width_sp: 568px;
 }
 
 body{
-    font-family: "Hiragino Kaku Gothic","メイリオ", sans-serif;
+    font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
     font-size: 100%;
     @include sp {
         font-size: 80%;
@@ -76,6 +76,7 @@ $header_height: 50px;
         }
     }
     &_txt-link{
+        @include flex_items-center;
         a{
             font-weight: bold;
             color: black;
@@ -83,7 +84,6 @@ $header_height: 50px;
             line-height: 1;
         }
         &_ico{
-            width: 8px;
             margin-right: 8px;
         }
     }
