@@ -19,19 +19,21 @@ html(lang="ja")
             | ayaoriko テストサイト
           figure.main-visual_img-wrap
             img(src="img/logo.png")
-      article.article
-        section.lesson
-          div.lesson_inner.contents-inner
-            div.lesson_sub-title Lesson 1
-            h2.lesson_title Contact Form
-            p.lesson_detail UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。
-            figure.lesson_img-wrap(style='background-image: url(img/lesson_image.jpg);')
-            div.button_wrap
-              a.button_base(href="#") ページを見る
+      article.article#app
+        <lesson-component comment="UIの基礎となるお問い合わせフォームをつくりました。" slug="contact-form"　title="Contact Form2"></lesson-component>
+        //- section.lesson
+        //-   div.lesson_inner.contents-inner
+        //-     div.lesson_sub-title
+        //-     h2.lesson_title Contact Form
+        //-     p.lesson_detail UIの基礎となる<br class="pc">お問い合わせフォームをつくりました。
+        //-     figure.lesson_img-wrap(style='background-image: url(img/lesson_image.jpg);')
+        //-     div.button_wrap
+        //-       a.button_base(href="#") ページを見る
       .fix-scroll
         .fix-scroll_box
           .fix-scroll_txt scroll
           .fix-scroll_arrow
             img(src="img/scroll_arrow.png")
     +footer('ayaoriko')
+    script(src="node_modules/vue/dist/vue.min.js")
     script(src="js/index.js")

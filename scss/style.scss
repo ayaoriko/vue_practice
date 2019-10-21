@@ -88,6 +88,9 @@ $header_height: 50px;
         &_ico{
             width: 10px;
             margin-right: 8px;
+            img{
+                width: 100%;
+            }
         }
     }
 }
@@ -214,5 +217,12 @@ $header_height: 50px;
     &_txt{
         font-size: 1.2em;
         margin-bottom: .5em;
+    }
+    &_arrow{
+        width: 35px;
+        margin: auto;
+        img{
+            width: 100%;
+        }
     }
 }
