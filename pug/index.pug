@@ -20,7 +20,7 @@ html(lang="ja")
           figure.main-visual_img-wrap
             img(src="img/logo.png")
       article.article#app
-        <lesson-component comment="UIの基礎となるお問い合わせフォームをつくりました。" slug="contact-form"　title="Contact Form2"></lesson-component>
+        <lesson-component v-for="item in list"　:title="item.title" :comment="item.comment" :img="item.img" :slug="item.slug" :id="1"></lesson-component>
         //- section.lesson
         //-   div.lesson_inner.contents-inner
         //-     div.lesson_sub-title
