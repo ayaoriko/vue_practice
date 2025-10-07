@@ -17,7 +17,7 @@
   "homepage": "https://github.com/ayaoriko/vue_practice#readme",
   "description": "",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.1",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
